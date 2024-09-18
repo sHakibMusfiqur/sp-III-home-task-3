@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: auto;
         }
 
         .form-container {
@@ -21,15 +22,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
+            width: 90%;
             max-width: 400px;
             box-sizing: border-box;
+            margin: 0 auto;
         }
 
         header {
             text-align: center;
             color: #fff;
-            font-size: 24px; 
+            font-size: 24px;
             margin-bottom: 20px;
             font-weight: bold;
             background-color: #08eaf6; 
@@ -102,6 +104,19 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+
+    
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px; 
+                padding: 8px; 
+            }
+
+            .form-container {
+                width: 95%; 
+                padding: 15px; 
+            }
         }
     </style>
 </head>
@@ -176,4 +191,3 @@
 
 </body>
 </html>
-
