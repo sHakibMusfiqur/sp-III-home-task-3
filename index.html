@@ -21,18 +21,21 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
         }
 
         header {
             text-align: center;
             color: #fff;
-            font-size: 28px;
+            font-size: 24px; 
             margin-bottom: 20px;
             font-weight: bold;
-            background-color: #08eaf6; /* Green background */
-            padding: 15px;
+            background-color: #08eaf6; 
+            padding: 10px; 
             border-radius: 8px;
+            word-wrap: break-word; 
         }
 
         label {
@@ -53,6 +56,7 @@
         .inline-inputs {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .inline-inputs label {
@@ -106,31 +110,24 @@
     <div class="form-container">
         <form action="/submit_student_info" method="POST" autocomplete="on" enctype="multipart/form-data">
             
-           
             <header>Student Information Form</header>
-
-           
+            
             <label for="name">Student Name:</label>
             <input type="text" id="name" name="student_name" placeholder="Enter student's full name" required>
 
-            
             <label for="student_id">Student ID:</label>
             <input type="text" id="student_id" name="student_id" placeholder="Enter student ID" required>
 
-            
             <label for="email">Email:</label>
             <input type="email" id="email" name="student_email" placeholder="Enter student's email" required>
 
-            
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone_number" placeholder="Enter student's phone number" pattern="[0-9]{10}" required>
             <small>Format: 1234567890</small><br><br>
 
-            
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required>
 
-            
             <label>Gender:</label>
             <div class="inline-inputs">
                 <input type="radio" id="male" name="gender" value="male">
@@ -143,7 +140,6 @@
                 <label for="other">Other</label>
             </div>
 
-           
             <label for="religion">Religion:</label>
             <select id="religion" name="religion" required>
                 <option value="">Select Religion</option>
@@ -155,7 +151,6 @@
                 <option value="other">Other</option>
             </select>
 
-            
             <label for="department">Department:</label>
             <select id="department" name="department" required>
                 <option value="">Select Department</option>
@@ -166,15 +161,12 @@
                 <option value="BBA">Business Administration</option>
             </select>
 
-            
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" placeholder="Enter student's address" required>
 
-            
             <label for="picture">Profile Picture:</label>
             <input type="file" id="picture" name="profile_picture" accept="image/*" required>
 
-            
             <div class="form-actions">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset Form">
@@ -184,3 +176,4 @@
 
 </body>
 </html>
+
